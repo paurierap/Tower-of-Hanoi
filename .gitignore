@@ -1,0 +1,5 @@
+.vscode
+*.o
+*.dat
+*.png
+*.out
