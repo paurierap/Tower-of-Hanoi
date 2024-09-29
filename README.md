@@ -8,4 +8,17 @@ Minor project to solve the classic puzzle [Tower of Hanoi](https://en.wikipedia.
 
 The minimal number of moves required to solve a Tower of Hanoi puzzle is $2^n − 1$.
 
+For example, for $n=3$:
+```console
+Move number 0: A = {3, 2, 1}, B = {}, C = {}
+Move number 1: A = {3, 2}, B = {}, C = {1}
+Move number 2: A = {3}, B = {2}, C = {1}
+Move number 3: A = {3}, B = {2, 1}, C = {}
+Move number 4: A = {}, B = {2, 1}, C = {3}
+Move number 5: A = {1}, B = {2}, C = {3}
+Move number 6: A = {1}, B = {}, C = {3, 2}
+Move number 7: A = {}, B = {}, C = {3, 2, 1}
+```
+
+
 ![The Tower of Hanoi game](tower-hanoi.jpg)

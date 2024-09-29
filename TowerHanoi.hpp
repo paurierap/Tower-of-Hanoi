@@ -44,23 +44,39 @@ class TowerHanoi
         void printState() const
         {
             std::cout << "Move number " << n_moves << ": ";
+
             std::cout << "A = {";
-            for (auto el : A)
+            for (const auto& el : A)
             {
+                if (el == A.back()) 
+                {
+                    std::cout << el;
+                    break;
+                }
                 std::cout << el << ", ";
             }
             std::cout << "}, ";
 
             std::cout << "B = {";
-            for (auto el : B)
+            for (const auto& el : B)
             {
+                if (el == B.back()) 
+                {
+                    std::cout << el;
+                    break;
+                }
                 std::cout << el << ", ";
             }
             std::cout << "}, ";
 
             std::cout << "C = {";
-            for (auto el : C)
+            for (const auto& el : C)
             {
+                if (el == C.back()) 
+                {
+                    std::cout << el;
+                    break;
+                }
                 std::cout << el << ", ";
             }
             std::cout << "}\n";
