@@ -17,70 +17,7 @@
 
 #include <iostream>
 #include <list>
-
-class TowerHanoi 
-{
-    private:
-        int move_number;
-        std::list<int> *A, *B, *C; // Pegs are represented by lists
-    
-    public:
-        TowerHanoi(std::list<int> *a, std::list<int> *b, std::list<int> *c) : move_number(0), A(a), B(b), C(c) 
-        {
-            std::cout << "\n";
-            printState();
-        }
-        void rec_solve(int n, std::list<int> *a, std::list<int> *b, std::list<int> *c)
-        {
-            if (n == 1) 
-            {
-                c->push_back(a->back());
-                a->pop_back();
-                move_number++;
-                printState();
-            }
-            else 
-            {
-                rec_solve(n - 1, a, c, b);          
-                c->push_back(a->back());
-                a->pop_back();
-                move_number++;
-                printState();
-                rec_solve(n - 1, b, a, c);
-            }
-        }
-        void printState()
-        {
-            std::cout << "Move number " << move_number << ": ";
-            std::cout << "A = {";
-            for (auto el : (*A))
-            {
-                std::cout << el << ", ";
-            }
-            std::cout << "}, ";
-
-            std::cout << "B = {";
-            for (auto el : (*B))
-            {
-                std::cout << el << ", ";
-            }
-            std::cout << "}, ";
-
-            std::cout << "C = {";
-            for (auto el : (*C))
-            {
-                std::cout << el << ", ";
-            }
-            std::cout << "}\n";
-        }
-
-        friend void solve(TowerHanoi& th);
-};
-
-void solve(TowerHanoi& th)
-{
-    th.rec_solve(th.A->size(), th.A, th.B, th.C);
-}
+#include "TowerHanoi.hpp"
 
 int main(int argc, char* argv[])
 {
@@ -88,25 +25,20 @@ int main(int argc, char* argv[])
 
     std::cout << "Tower of Hanoi Solver!\n\n" << "How many disks do you want to solve for? ";
     std::cin >> n_disks;
+    std::cout << "\n";
 
     while (n_disks <= 0)
     {
-        std::cout << "\nPlease provide a positive integer for the number of disks: ";
+        std::cout << "Please provide a positive integer for the number of disks: ";
         std::cin >> n_disks;
-    }
-
-    std::list<int> a, b, c;
-    
-    for (int i = 1; i <= n_disks; i++)
-    {
-        a.push_front(i);
+        std::cout << "\n";
     }
     
-    TowerHanoi tower(&a, &b, &c);
+    TowerHanoi tower(n_disks);
 
     solve(tower);
 
-    std::cout << "\nThe minimal number of moves is 2^n-1 for n disks!\n";
+    std::cout << "\nThe minimal number of moves is 2^n-1 for n disks!\n\n";
 
     return EXIT_SUCCESS;
 }
