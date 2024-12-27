@@ -7,7 +7,7 @@
         - The goal is to move all disks from peg A to peg C, with the following rules:
             - Only one disk can be moved at a time.
             - Each move consists of taking the upper disk from one of the stacks and placing it on top of another stack or on an empty rod.
-            - No disk may be placed on top of a disk that is smaller than it.
+            - No disk may be placed on top of a smaller disk.
 
     The solution is found recursively by noticing:
         - To move k disks from one peg to another, we first need to move (k-1) disks to the spare peg. 
