@@ -1,6 +1,8 @@
 #ifndef TOWERHANOIHPP
 #define TOWERHANOIHPP
 
+#include <list>
+
 class TowerHanoi 
 {
     private:

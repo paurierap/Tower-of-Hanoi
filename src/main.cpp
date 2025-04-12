@@ -16,7 +16,6 @@
 */
 
 #include <iostream>
-#include <list>
 #include "TowerHanoi.hpp"
 
 int main(int argc, char* argv[])

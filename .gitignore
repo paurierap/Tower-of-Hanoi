@@ -3,3 +3,8 @@
 *.dat
 *.png
 *.out
+*.json
+*.dSYM
+/html/*
+/latex/*
+doxy-config

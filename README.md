@@ -21,4 +21,4 @@ Move number 7: A = {}, B = {}, C = {3, 2, 1}
 ```
 
 
-![The Tower of Hanoi game](tower-hanoi.jpg)
+![The Tower of Hanoi game](figs/tower-hanoi.jpg)
