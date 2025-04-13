@@ -1,0 +1,32 @@
+\chapter{TOWER OF HANOI SOLVER}
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{TOWER OF HANOI SOLVER@{TOWER OF HANOI SOLVER}}
+\label{md__r_e_a_d_m_e_autotoc_md0}%
+\Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
+
+
+Minor project to solve the classic puzzle \href{https://en.wikipedia.org/wiki/Tower_of_Hanoi}{\texttt{ Tower of Hanoi}}, based on 3 different wooden pegs where the main goal is to move a stack of \$n\$ disks from an initial peg (peg A) to a target one (C), while using a spare peg (peg B). The rules to do so are the following\+:
+
+
+\begin{DoxyEnumerate}
+\item Only one disk may be moved at a time.
+\item Each move consists of taking the upper disk from one of the stacks and placing it on top of another stack or on an empty peg.
+\item No disk may be placed on top of a disk that is smaller than it.
+\end{DoxyEnumerate}
+
+The minimal number of moves required to solve a Tower of Hanoi puzzle is \$2\texorpdfstring{$^\wedge$}{\string^}n − 1\$.
+
+For example, for \$n=3\$\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Move\ number\ 0:\ A\ =\ \{3,\ 2,\ 1\},\ B\ =\ \{\},\ C\ =\ \{\}}
+\DoxyCodeLine{Move\ number\ 1:\ A\ =\ \{3,\ 2\},\ B\ =\ \{\},\ C\ =\ \{1\}}
+\DoxyCodeLine{Move\ number\ 2:\ A\ =\ \{3\},\ B\ =\ \{2\},\ C\ =\ \{1\}}
+\DoxyCodeLine{Move\ number\ 3:\ A\ =\ \{3\},\ B\ =\ \{2,\ 1\},\ C\ =\ \{\}}
+\DoxyCodeLine{Move\ number\ 4:\ A\ =\ \{\},\ B\ =\ \{2,\ 1\},\ C\ =\ \{3\}}
+\DoxyCodeLine{Move\ number\ 5:\ A\ =\ \{1\},\ B\ =\ \{2\},\ C\ =\ \{3\}}
+\DoxyCodeLine{Move\ number\ 6:\ A\ =\ \{1\},\ B\ =\ \{\},\ C\ =\ \{3,\ 2\}}
+\DoxyCodeLine{Move\ number\ 7:\ A\ =\ \{\},\ B\ =\ \{\},\ C\ =\ \{3,\ 2,\ 1\}}
+
+\end{DoxyCode}
+
+
+ 

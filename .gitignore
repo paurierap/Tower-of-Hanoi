@@ -4,7 +4,5 @@
 *.png
 *.out
 *.json
-*.dSYM
-/html/*
-/latex/*
+/build/
 doxy-config
